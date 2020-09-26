@@ -1,0 +1,57 @@
+{
+  "name": "Boilerplate",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "start-test": "METEOR_LOCAL_DIR=.meteor/test meteor --settings private/mup/test/settings.json --port 4000",
+    "cypress:run": "node tests/cypress/support/cypress.js",
+    "cypress:open": "cypress open",
+    "test": "start-server-and-test start-test http://localhost:4000 cypress:open",
+    "ci": "start-server-and-test start-test http://localhost:4000 cypress:run",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.3",
+    "@naschpitz/unique-modal": "^1.0.10",
+    "bcrypt": "^4.0.1",
+    "bootstrap": "^4.5.0",
+    "dot-object": "^2.1.3",
+    "download-url-from-browser": "0.0.2",
+    "filesize": "^6.1.0",
+    "install": "^0.13.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "meteor-node-stubs": "^1.0.0",
+    "moment": "^2.25.3",
+    "npm": "^6.14.5",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.10.0",
+    "react-loadable": "^5.5.0",
+    "react-modal": "^3.11.2",
+    "react-number-format": "^4.4.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-s-alert": "^1.4.1",
+    "react-share": "^4.1.0",
+    "react-spinners": "^0.8.3",
+    "simpl-schema": "^1.7.3",
+    "tsparticles": "^1.14.3",
+    "wait-on": "^5.0.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "cypress": "^4.12.1",
+    "start-server-and-test": "^1.11.3"
+  }
+}

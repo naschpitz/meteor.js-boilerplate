@@ -1,0 +1,2 @@
+User-agent: Googlebot
+sitemap: https://boilerplate.com/
